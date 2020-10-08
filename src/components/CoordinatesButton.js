@@ -3,11 +3,6 @@ import React, { Component } from 'react';
 
 class CoordinatesButton extends Component {
 
-  state = {
-    x: 0,
-    y: 0
-  }
-
   handleClick = (evt) => {
     this.props.onReceiveCoordinates([evt.screenX, evt.screenY])
   }
