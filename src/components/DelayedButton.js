@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 class DelayedButton extends Component {
 
   handleDelayClick = (evt) => {
+    evt.persist();
     let {onDelayedClick, delay} = this.props
     setTimeout(() => {
     onDelayedClick(evt.type)
