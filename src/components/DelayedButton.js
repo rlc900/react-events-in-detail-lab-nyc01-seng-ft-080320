@@ -1,11 +1,17 @@
 // Code DelayedButton Component Here
 import React, { Component } from 'react';
 
-class DelayedButton extends Component {
+class DelayedButton extends Component
+
+  handleDelayClick = (evt) => {
+    setTimeout(this.props.onDelayedClick(evt.type), this.props.delay)
+  }
 
   render() {
     return (
-      <div></div>
+      <div>
+        <button></button>
+      </div>
     );
   }
 
