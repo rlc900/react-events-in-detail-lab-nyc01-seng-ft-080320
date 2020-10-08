@@ -3,9 +3,15 @@ import React, { Component } from 'react';
 
 class CoordinatesButton extends Component {
 
+  state = {
+    x: 0,
+    y: 0
+  }
+
   handleClick = (evt) => {
-    let targetEvent = evt.target;
-    onReceiveCoordinates(targetEvent)
+    let xCoordinate = evt.screenX;
+    let yCoordinate = evt.screenY;
+    onReceiveCoordinates(xCoordinate, yCoordinate)
   }
 
   render() {
