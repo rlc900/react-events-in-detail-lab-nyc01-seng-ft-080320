@@ -9,15 +9,13 @@ class CoordinatesButton extends Component {
   }
 
   handleClick = (evt) => {
-    let xCoordinate = evt.screenX;
-    let yCoordinate = evt.screenY;
-    onReceiveCoordinates(xCoordinate, yCoordinate)
+    this.props.onReceiveCoordinates([evt.screenX, evt.screenY])
   }
 
   render() {
     return (
       <div>
-        <button onClick={this.handleClick}></button>
+        <button onClick={this.handleClick}>Click dis!</button>
       </div>
     );
   }
